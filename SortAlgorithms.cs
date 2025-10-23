@@ -54,12 +54,13 @@ public static class SortAlgorithms
             while (array[right] > pivot) right--;
 
             // If we get to this part of the code
-            // it means we have a match
+            // it means we have either have a match or no match.
+            // If left has not passed the right it means we have a match
             if (left <= right)
             {
                 (array[left], array[right]) = (array[right], array[left]);
                 
-                // Forces increment to break the while
+                // Forces increment to break the loop if we are done
                 left++;
                 right--;
             }
